@@ -15,44 +15,19 @@ Our goal → check if all mistakes are small
 
  
 
-“Global inversions consider all pairs, while local inversions consider only adjacent pairs. If any element is displaced by more than one position, it introduces a global inversion that is not local.” 
-
- 
-
-Type, Pairs checked 
-
-Global: All (i, j) where i < j 
-
-Local:  only (i, i+1) 
-
- 
-
- 
-
-Global inversion includes: 
-
-Adjacent pairs  
-
-Non-adjacent pairs  
-
- Local inversion includes: 
-
-Only adjacent pairs (subset) 
-
+“Global inversions consider all pairs, while local inversions consider only adjacent pairs. If any element is displaced by more than one position, it introduces a global inversion.
 
 
 Step by step explanation: 
 
--a because we are talking about array called nums 
+1. -a because we are talking about array called nums 
 
-Main conceptual condition is nums[i] - i <= 1 
+2. Main conceptual condition is nums[i] - i <= 1 
 
-First, we do nums[i] -i meaning we target the value at the index i and minus it with the index value i.e index value is 1 and index is 2. 
+3. First, we do nums[i] -i meaning we target the value at the index i and minus it with the index value i.e index value is 1 and index is 2. 
 
-The above line will give minus (–) value so we stored this in diff and use –diff. Any value - (-1) equals 1. 
+4. The above line will give minus (–) value so we stored this in diff and use –diff. Any value - (-1) equals 1. 
 
-Then second condition where diff is greater than 1 meaning the values moved more than 1 indexes away so it is then global inversion. So, we echo false and no need to check further values since our ultimate output will be false. 
+5. Then second condition where diff is greater than 1 meaning the values moved more than 1 indexes away so it is then global inversion. So, we echo false and no need to check further values since our ultimate output will be false. 
 
- 
-
-Lastly if all this is not true then we will echo which will meant that global inversion equals local inversion 
+6. Lastly if all this is not true then we will echo which will meant that global inversion equals local inversion 
